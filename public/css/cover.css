@@ -1,42 +1,35 @@
 /* Variables */
-@background-color: #fff;
-@font-color: #333;
-@zebra: #b2c7c8;
-
-
 /* Links */
 a,
 a:focus,
 a:hover {
   color: #fff;
 }
-
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
   color: #333;
-  text-shadow: none; /* Prevent inheritence from `body` */
+  text-shadow: none;
+  /* Prevent inheritence from `body` */
   background-color: #fff;
   border: 1px solid #333;
 }
-
-
 /* Base structure */
-
 html,
 body {
   height: 100%;
-  background-color: @background-color;
+  background-color: #ffffff;
 }
-
 /* Text  */
-
 body {
-  color: @font-color;
+  color: #333333;
   font-family: 'Lato', Helvetica, sans-serif;
 }
-h2, h3, h4, h5 {
+h2,
+h3,
+h4,
+h5 {
   font-weight: normal;
   text-transform: uppercase;
   line-height: 1.1;
@@ -46,13 +39,10 @@ h2, h3, h4, h5 {
 .big-text {
   font-size: 28px;
   line-height: 1.1;
-  // text-align: justify;
-  // margin: 0.5em 0;
 }
 p {
   font-size: 18px;
 }
-
 /* Background */
 body {
   background: url(../img/test2.jpg) no-repeat center center fixed;
@@ -64,54 +54,51 @@ body {
   min-height: 500px;
   overflow-y: scroll;
 }
-
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
   width: 100%;
-  height: 100%; /* For at least Firefox */
+  height: 100%;
+  /* For at least Firefox */
   min-height: 100%;
 }
-
 .zebra {
-  background-color: @zebra;
+  background-color: #b2c7c8;
 }
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
 }
-.cover-container, .masthead-container {
+.cover-container,
+.masthead-container {
   margin-right: auto;
   margin-left: auto;
 }
-
 /* Padding for spacing */
 .inner {
   padding: 30px;
 }
-
-
 /* Header */
 .masthead {
-  background-color: rgba(34,34,34,.95);
+  background-color: rgba(34, 34, 34, 0.95);
   width: 100%;
   z-index: 999;
 }
 .masthead h3 {
-  margin:0; padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
 .masthead-brand a {
   display: block;
-  height: 50px; width: 189px;
+  height: 50px;
+  width: 189px;
   background: url(../img/marslaw_tiny.png) no-repeat top left;
   text-indent: -9999px;
 }
-
 .masthead-nav > li {
   display: inline-block;
 }
@@ -123,8 +110,9 @@ body {
   padding-left: 0;
   font-size: 16px;
   font-weight: normal;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
+  color: #fff;
+  /* IE8 proofing */
+  color: rgba(255, 255, 255, 0.75);
   border-bottom: 2px solid transparent;
   text-transform: uppercase;
 }
@@ -132,7 +120,7 @@ body {
 .masthead-nav > li > a:focus {
   background-color: transparent;
   border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
@@ -140,7 +128,6 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-
 @media (min-width: 768px) {
   .masthead-brand {
     float: left;
@@ -149,19 +136,17 @@ body {
     float: right;
   }
 }
-
 .symbol {
-  margin:0; padding:0; line-height: 0.6;
+  margin: 0;
+  padding: 0;
+  line-height: 0.6;
   font-family: arial, sans-serif;
   font-size: 50px;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255, 255, 255, 0.4);
 }
-
-
 /*
  * Cover
  */
-
 .cover {
   padding: 0 20px;
 }
@@ -169,23 +154,18 @@ body {
   padding: 10px 20px;
   font-weight: bold;
 }
-
-
 /*
  * Footer
  */
-
- .mastfoot {
-  color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
+.mastfoot {
+  color: #999;
+  /* IE8 proofing */
+  color: rgba(255, 255, 255, 0.5);
 }
-
-
 /*
  * Affix and center
  */
-
- @media (min-width: 768px) {
+@media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
@@ -194,7 +174,8 @@ body {
     overflow: hidden;
   }
   .site-wrapper {
-    padding-top: 50px; /* Offset for nav */
+    padding-top: 50px;
+    /* Offset for nav */
   }
   .mastfoot {
     position: fixed;
@@ -209,9 +190,9 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    width: 100%;
+    /* Must be percentage or pixels for horizontal alignment */
   }
-
   /* Grids */
   .col {
     float: left;
@@ -219,11 +200,10 @@ body {
   .col-4 {
     width: 33.3333%;
   }
-  .col-8{
+  .col-8 {
     width: 66.6667%;
   }
 }
-
 @media (min-width: 992px) {
   .mastfoot,
   .masthead-container,
