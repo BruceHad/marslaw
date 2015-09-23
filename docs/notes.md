@@ -1,21 +1,19 @@
 ## Workflow
 
-### Bootstrap/LESS
+### Structure
 
-1. Get copy of Bootstrap
-2. Create the following directory structure:
+Using Bootstrap so have a copy of the bootstrap source. Keeping that in a separate folder and importing the files that I need.
 
-public
-  css
-  foont
-  js
-  index.html
-src
-  font
-  less
-    bootstrap
-    main.less
+So the basic folder structure looks a bit like this:
 
-3. Copy the less files from bootstrap to src/less/bootstrap.
-3. Enter your @imports into the main.less file.
-4. Check compliling is working.
+	public
+		css
+		font
+		js
+		index.html
+	src
+		bootstrap
+
+src/bootstrap contains the bootstrap .less files.
+
+In the css folder I have a main.less file
