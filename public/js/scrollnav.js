@@ -1,15 +1,10 @@
 // http://codepen.io/mattsince87/pen/exByn
 
 function scrollNav() {
-  $('.nav a').click(function(){
-    //Toggle Class
-    // $(".active").removeClass("active");
-    // $(this).closest('li').addClass("active");
-    var theClass = $(this).attr("class");
-    $('.'+theClass).parent('li').addClass('active');
+  $('a.scroll').click(function(){
     //Animate
     $('html, body').stop().animate({
-        scrollTop: $( $(this).attr('href') ).offset().top
+        scrollTop: $( $(this).attr('href') ).offset().top - 0
     }, 400);
     return false;
   });
