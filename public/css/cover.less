@@ -1,26 +1,56 @@
 /* Variables */
-@background-color: #fff;
+@background-color: #fcfcfc;
+@alt-background-color: #b2c7c8;
 @font-color: #333;
-@zebra: #b2c7c8;
+@alt-font-color: #ddd;
+@a-color: #dfe7e7;
+@alt-a-color: #568587;
+@masthead-background: rgba(34,34,34,.95);
+
+/* http://paletton.com/#uid=13j0u0k3zJz03+81bTr71yobKs1 */
 
 
-/* Links */
+/* Text & Colours*/
+
+body {
+  color: @font-color;
+  font-family: 'Lato', Helvetica, sans-serif;
+	line-height: 1.3;
+}
+h2, h3, h4, h5 {
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  word-spacing: 0.15em;
+}
+p {
+  font-size: 18px;
+}
+.lead {
+  font-size: 24px;
+}
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: @a-color;
 }
-
-/* Custom default button */
+.alt {
+	color: @alt-font-color;
+	background-color: @alt-background-color;
+	a,
+	a:focus,
+	a:hover {
+		color: @alt-a-color;
+	}
+}
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: #fff;
-  border: 1px solid #333;
+  color: @font-color;
+  background-color: @background-color;
+  border: 1px solid @alt-font-color;
 }
-
 
 /* Base structure */
 
@@ -30,32 +60,7 @@ body {
   background-color: @background-color;
 }
 
-/* Text  */
-
 body {
-  color: @font-color;
-  font-family: 'Lato', Helvetica, sans-serif;
-}
-h2, h3, h4, h5 {
-  font-weight: normal;
-  text-transform: uppercase;
-  line-height: 1.1;
-  letter-spacing: 0.01em;
-  word-spacing: 0.15em;
-}
-.big-text {
-  font-size: 28px;
-  line-height: 1.1;
-  // text-align: justify;
-  // margin: 0.5em 0;
-}
-p {
-  font-size: 18px;
-}
-
-/* Background */
-body {
-  background: url(../img/test2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -71,10 +76,6 @@ body {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-}
-
-.zebra {
-  background-color: @zebra;
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -93,11 +94,11 @@ body {
 
 /* Header */
 .masthead {
-  background-color: rgba(34,34,34,.95);
+  background-color: @masthead-background;
   width: 100%;
-  z-index: 999;
+  z-index: 9999;
 }
-.masthead h3 {
+.masthead h1 {
   margin:0; padding: 0;
 }
 .masthead-brand {
@@ -111,7 +112,6 @@ body {
   background: url(../img/marslaw_tiny.png) no-repeat top left;
   text-indent: -9999px;
 }
-
 .masthead-nav > li {
   display: inline-block;
 }
@@ -149,7 +149,6 @@ body {
     float: right;
   }
 }
-
 .symbol {
   margin:0; padding:0; line-height: 0.6;
   font-family: arial, sans-serif;
@@ -158,34 +157,15 @@ body {
 }
 
 
-/*
- * Cover
- */
+/* Home */
 
-.cover {
-  padding: 0 20px;
-}
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
+.site-home{
+	background: url(../img/test2.jpg) no-repeat center center fixed;
 }
 
+/* Affix and center */
 
-/*
- * Footer
- */
-
- .mastfoot {
-  color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
-}
-
-
-/*
- * Affix and center
- */
-
- @media (min-width: 768px) {
+@media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
@@ -196,14 +176,9 @@ body {
   .site-wrapper {
     padding-top: 50px; /* Offset for nav */
   }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
-    text-align: center;
+/*     text-align: center; */
   }
   /* Handle the widths */
   .masthead,
@@ -215,12 +190,28 @@ body {
   /* Grids */
   .col {
     float: left;
+		padding: 0 15px;
   }
+	.col-3 {
+		width: 3/12*100%;
+	}
   .col-4 {
-    width: 33.3333%;
+    width:4/12*100%;
   }
-  .col-8{
-    width: 66.6667%;
+	.col-5 {
+    width:5/12*100%;
+  }
+	.col-6 {
+    width:6/12*100%;
+  }
+	.col-7 {
+    width:7/12*100%;
+  }
+	.col-8{
+    width: 8/12*100%;
+  }
+	.col-9 {
+    width:9/12*100%;
   }
 }
 

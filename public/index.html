@@ -13,10 +13,10 @@
   <title>Marslaw</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="css/main.css" rel="stylesheet">
+  <link href="css/main.less.css" rel="stylesheet">
 
   <!-- Custom styles for this template/marslaw website -->
-  <link href="css/cover.css" rel="stylesheet">
+  <link href="css/cover.less.css" rel="stylesheet">
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -29,7 +29,7 @@
 
   <div class="masthead clearfix">
     <div class="masthead-container clearfix">
-      <h3 class="masthead-brand"><a href="#home" class="scroll">Marsław</a></h3>
+      <h1 class="masthead-brand"><a href="#home" class="scroll">Marsław</a></h1>
       <nav id="my-navbar">
         <ul class="nav masthead-nav" role="tablist">
           <li class="active"><a href="#home" class="scroll"><span class="glyphicon glyphicon-home"></span></a>
@@ -45,8 +45,8 @@
     </div>
   </div>
 
-  <div class="site-wrapper" name="home" id="home">
-    <div class="site-wrapper-inner cover-wrapper-inner">
+  <div class="site-wrapper alt site-home" name="home" id="home">
+    <div class="site-wrapper-inner">
       <div class="cover-container">
         <div class="inner cover">
           <h1 class="cover-heading"><img src = "img/marslaw_logo.png" alt="Marsław" /></h1>
@@ -55,8 +55,7 @@
           <p class="lead">
             <a href="#about" class="btn btn-lg btn-default scroll">Dowiedz się więcej</a>
           </p>
-          <p class="symbol">&bull;</p>
-          <p class="symbol">&darr;</p>
+          <p class="symbol"><span class="glyphicon glyphicon-chevron-down"></span></p>
         </div>
       </div>
     </div>
@@ -74,7 +73,7 @@
           <p>Dowóz i montaż u Pacjenta</p>
         </div>
         <div class="col col-8">
-          <p class="big-text">Firma „Marsław” prowadzi wypożyczalnię sprzętu rehabilitacyjnego w ramach współpracy z firmą „Sklep Zdrowie” Waldemar Kasprzak, Marcin Tomaszewski.</p>
+          <p class="lead">Firma „Marsław” prowadzi wypożyczalnię sprzętu rehabilitacyjnego w ramach współpracy z firmą „Sklep Zdrowie” Waldemar Kasprzak, Marcin Tomaszewski.</p>
           <p>Wypożyczalnia mieści się na ul. Ogrodowej 47 w Częstochowie (teren Wyższej Szkoły Hotelarstwa i Turystyki w Częstochowie)</p>
           <p>Wypożyczamy i sprzedajemy łóżka rehabilitacyjne i inny sprzęt rehabilitacyjny.</p>
           <p>Obsługujemy Klientów z Częstochowy i w promieniu do 100 km od Częstochowy.</p>
@@ -84,7 +83,7 @@
     </div>
   </div>
 
-  <div class="site-wrapper zebra" name="services" id="services">
+  <div class="site-wrapper alt" name="services" id="services">
     <div class="site-wrapper-inner">
       <div class="cover-container">
         <h2> hello</h2>
@@ -95,13 +94,50 @@
   <div class="site-wrapper" name="contact" id="contact">
     <div class="site-wrapper-inner">
       <div class="cover-container">
-        <div class="inner cover">
-          <h1 class="cover-heading">Contact</h1>
-          <p class="lead">Blah de blah</p>
-        </div>
+        <div class="col col-6">
+					<h2>Skontaktuj się z nami</h2>
+					<p>Jestem dostępny do udzielenia pomocy.</p>
+					<p>Prosimy o kontakt na poniższy adres lub skorzystać z formularza kontaktowego tutaj i odpowiadam krótko.</p>
+					<p>Telefon: xxxxxxxxxx</p>
+					<p>E-mail: xxxxxxxxxxxxxx</p>
+					<p>Adres: xxxxxxxxxx</p>
+				</div>
+				<div class="col col-6">
+					<form id="contact-form" action="contact.php" method="post" novalidate>
+						<h2>Formularz kontaktowy</h2>
+						<div class="form-group">
+						  <label class="control-label" for="contact-name">Imie</label>
+						  <div class="controls">
+								<input id="contact-name" name="contactName" placeholder="Twoje imie" class="form-control requiredField" type="text">
+						  </div>
+						</div><!-- End name input -->
+						
+						<div class="form-group">
+						  <label class="control-label" for="contact-mail">E-mail</label>
+						  <div class=" controls">
+								<input id="contact-mail" name="email" placeholder="Twoje e-mail" class="form-control requiredField" type="email">
+						  </div>
+						</div><!-- End email input -->
+						
+						<div class="form-group">
+						  <label class="control-label" for="contact-message">Wiadomość</label>
+							<div class="controls">
+								<textarea id="contact-message" name="comments"  placeholder="Twoje wiadomość" class="form-control requiredField" rows="6"></textarea>
+							</div>
+						</div>						
+						<p><button name="submit" type="submit" class="btn btn-color2 btn-block" data-error-message="Error!" data-sending-message="wysyłanie..." data-ok-message="Wiadomość wysłana">Wysłać</button></p>
+						<input type="hidden" name="submitted" id="submitted" value="true" />						
+					</form>
+				</div>
       </div>
     </div>
   </div>
+	
+	<footer class="footer">
+		<div class="cover-container">
+			<p>Business bunf.</p>
+		</div>
+	</footer>
 
 
 
