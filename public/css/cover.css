@@ -1,30 +1,11 @@
 /* Variables */
-/* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
-/* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none;
-  /* Prevent inheritence from `body` */
-  background-color: #fff;
-  border: 1px solid #333;
-}
-/* Base structure */
-html,
-body {
-  height: 100%;
-  background-color: #ffffff;
-}
-/* Text  */
+/*#385076*/
+/* http://paletton.com/#uid=13j0u0k3zJz03+81bTr71yobKs1 */
+/* Text & Colours*/
 body {
   color: #333333;
   font-family: 'Lato', Helvetica, sans-serif;
+  line-height: 1.3;
 }
 h2,
 h3,
@@ -36,16 +17,53 @@ h5 {
   letter-spacing: 0.01em;
   word-spacing: 0.15em;
 }
-.big-text {
-  font-size: 28px;
-  line-height: 1.1;
+h2 {
+  font-size: 36px;
 }
 p {
   font-size: 18px;
 }
-/* Background */
+.lead {
+  font-size: 24px;
+}
+a,
+a:focus,
+a:hover {
+  color: #dfe7e7;
+}
+.alt {
+  color: #385076;
+  background-color: #b2c7c8;
+}
+.alt a,
+.alt a:focus,
+.alt a:hover {
+  color: #568587;
+}
+.button {
+  text-align: center;
+}
+.button .glyphicon {
+  margin: 0px 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 50px;
+  color: rgba(0, 0, 0, 0.2);
+}
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #385076 !important;
+  background-color: #b2c7c8;
+  border: 1px solid #385076;
+}
+/* Base structure */
+html,
 body {
-  background: url(../img/test2.jpg) no-repeat center center fixed;
+  height: 100%;
+  background-color: #fcfcfc;
+}
+body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -62,9 +80,6 @@ body {
   /* For at least Firefox */
   min-height: 100%;
 }
-.zebra {
-  background-color: #b2c7c8;
-}
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
@@ -79,12 +94,24 @@ body {
   padding: 30px;
 }
 /* Header */
-.masthead {
-  background-color: rgba(34, 34, 34, 0.95);
-  width: 100%;
-  z-index: 999;
+.marslaw-logo-large {
+  height: 75px;
+  width: 285px;
+  text-indent: -9999px;
+  background: url(../img/marslaw_blt_large.png) no-repeat top left;
 }
-.masthead h3 {
+.marslaw-logo-medium {
+  height: 40px;
+  width: 152px;
+  text-indent: -9999px;
+  background: url(../img/marslaw_blt_medium.png) no-repeat top left;
+}
+.masthead {
+  background-color: rgba(56, 80, 118, 0.95);
+  width: 100%;
+  z-index: 9999;
+}
+.masthead h1 {
   margin: 0;
   padding: 0;
 }
@@ -96,7 +123,7 @@ body {
   display: block;
   height: 50px;
   width: 189px;
-  background: url(../img/marslaw_tiny.png) no-repeat top left;
+  background: url(../img/marslaw_wt_small.png) no-repeat top left;
   text-indent: -9999px;
 }
 .masthead-nav > li {
@@ -136,35 +163,19 @@ body {
     float: right;
   }
 }
-.symbol {
-  margin: 0;
-  padding: 0;
-  line-height: 0.6;
-  font-family: arial, sans-serif;
-  font-size: 50px;
-  color: rgba(255, 255, 255, 0.4);
-}
-/*
- * Cover
- */
-.cover {
-  padding: 0 20px;
-}
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-/*
- * Footer
- */
-.mastfoot {
-  color: #999;
+footer {
+  background-color: rgba(56, 80, 118, 0.95);
+  padding: 15px;
+  color: #fff;
   /* IE8 proofing */
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.75);
 }
-/*
- * Affix and center
- */
+/* Home */
+.site-home {
+  background: url(../img/sleeping.png) no-repeat center center fixed;
+  background-size: cover;
+}
+/* Affix and center */
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
@@ -177,14 +188,9 @@ body {
     padding-top: 50px;
     /* Offset for nav */
   }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
-    text-align: center;
+    /*     text-align: center; */
   }
   /* Handle the widths */
   .masthead,
@@ -196,12 +202,28 @@ body {
   /* Grids */
   .col {
     float: left;
+    padding: 0 15px;
+  }
+  .col-3 {
+    width: 25%;
   }
   .col-4 {
-    width: 33.3333%;
+    width: 33.33333333%;
+  }
+  .col-5 {
+    width: 41.66666667%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33333333%;
   }
   .col-8 {
-    width: 66.6667%;
+    width: 66.66666667%;
+  }
+  .col-9 {
+    width: 75%;
   }
 }
 @media (min-width: 992px) {

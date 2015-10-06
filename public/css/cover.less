@@ -1,11 +1,12 @@
 /* Variables */
+
 @background-color: #fcfcfc;
 @alt-background-color: #b2c7c8;
 @font-color: #333;
-@alt-font-color: #ddd;
+@alt-font-color: #385076;
 @a-color: #dfe7e7;
 @alt-a-color: #568587;
-@masthead-background: rgba(34,34,34,.95);
+@masthead-background: rgba(56, 80, 118,.95); /*#385076*/
 
 /* http://paletton.com/#uid=13j0u0k3zJz03+81bTr71yobKs1 */
 
@@ -23,6 +24,9 @@ h2, h3, h4, h5 {
   line-height: 1.1;
   letter-spacing: 0.01em;
   word-spacing: 0.15em;
+}
+h2 {
+  font-size: 36px;
 }
 p {
   font-size: 18px;
@@ -44,11 +48,25 @@ a:hover {
 		color: @alt-a-color;
 	}
 }
+.button {
+  text-align: center;
+}
+.button p {
+  // margin:0; padding:0;
+}
+.button .glyphicon {
+  margin:0px 0; padding:0; line-height: 1;
+  // font-family: arial, sans-serif;
+  font-size: 50px;
+  color: rgba(0,0,0,0.2);
+  // border: 1px solid red;
+}
+
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-  color: @font-color;
-  background-color: @background-color;
+  color: @alt-font-color !important;
+  background-color: @alt-background-color;
   border: 1px solid @alt-font-color;
 }
 
@@ -93,6 +111,19 @@ body {
 
 
 /* Header */
+
+.marslaw-logo-large {
+  height: 75px; width: 285px;
+  text-indent: -9999px;
+  background: url(../img/marslaw_blt_large.png) no-repeat top left;
+}
+
+.marslaw-logo-medium {
+  height: 40px; width: 152px;
+  text-indent: -9999px;
+  background: url(../img/marslaw_blt_medium.png) no-repeat top left;
+}
+
 .masthead {
   background-color: @masthead-background;
   width: 100%;
@@ -109,7 +140,7 @@ body {
 .masthead-brand a {
   display: block;
   height: 50px; width: 189px;
-  background: url(../img/marslaw_tiny.png) no-repeat top left;
+  background: url(../img/marslaw_wt_small.png) no-repeat top left;
   text-indent: -9999px;
 }
 .masthead-nav > li {
@@ -149,18 +180,19 @@ body {
     float: right;
   }
 }
-.symbol {
-  margin:0; padding:0; line-height: 0.6;
-  font-family: arial, sans-serif;
-  font-size: 50px;
-  color: rgba(255,255,255,0.4);
-}
 
+footer {
+  background-color: @masthead-background;
+  padding: 15px;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+}
 
 /* Home */
 
 .site-home{
-	background: url(../img/test2.jpg) no-repeat center center fixed;
+	background: url(../img/sleeping.png) no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* Affix and center */

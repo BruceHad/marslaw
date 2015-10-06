@@ -1,13 +1,24 @@
-// http://codepen.io/mattsince87/pen/exByn
-
-function scrollNav() {
-  $('a.scroll').click(function(){
+(function(w) {
+  //Staggered scroll
+  http://codepen.io/mattsince87/pen/exByn
+  $('a.scroll').click(function(e) {
+    var hr = $(this).attr('href');
+    e.preventDefault();
     //Animate
-    $('html, body').stop().animate({
-        scrollTop: $( $(this).attr('href') ).offset().top - 0
-    }, 400);
-    return false;
+    $('body').animate(
+      {scrollTop: $($(this).attr('href')).offset().top - 0},
+      300,
+      "swing",
+      function(){window.location.hash = hr }
+    );
   });
-  $('.scrollTop a').scrollTop();
-}
-scrollNav();
+
+  // Detect move from top
+  w.onscroll = function() {
+    if(w.scrollY > 50) {
+      console.log("You have moved!");
+    } else {
+      console.log("You are back at the top!");
+    }
+  };
+})(window);
