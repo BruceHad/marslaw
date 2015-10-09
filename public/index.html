@@ -47,16 +47,14 @@
 
       <div class="site-wrapper alt site-home" name="home" id="home">
         <div class="site-wrapper-inner">
-          <div class="cover-container">
-            <div class="inner cover">
-              <h1 class="marslaw-logo-large">Marsław</h1>
-              <p>Barbara Skibińska</p>
-              <p class="lead">Wypożyczanie łóżek rehabilitacyjnych i sprzetu medycznego</p>
-              <div class="button">
-                <p><a href="#about" class="btn btn-lg btn-default scroll">Dowiedz się więcej</a></p>
-                <p><span class="glyphicon glyphicon-arrow-down"></span></p>
-                <!-- <p><span class="glyphicon glyphicon-chevron-down"></span></p> -->
-              </div>
+          <div class="cover-container clearfix">
+            <h1 class="marslaw-logo-large">Marsław</h1>
+            <p>Barbara Skibińska</p>
+            <p class="lead">Wypożyczanie łóżek rehabilitacyjnych i sprzetu medycznego</p>
+            <div class="button">
+              <p><a href="#about" class="btn btn-lg btn-default scroll">Dowiedz się więcej</a></p>
+              <p><span class="glyphicon glyphicon-arrow-down"></span></p>
+              <!-- <p><span class="glyphicon glyphicon-chevron-down"></span></p> -->
             </div>
           </div>
         </div>
@@ -64,7 +62,7 @@
 
       <div class="site-wrapper" name="about" id="about">
         <div class="site-wrapper-inner">
-          <div class="cover-container">
+          <div class="cover-container clearfix">
 
             <div class="col col-4">
               <p><img src="img/bed_small.png" alt="Bed" /></p>
@@ -86,34 +84,16 @@
 
       <div class="site-wrapper alt" name="services" id="services">
         <div class="site-wrapper-inner">
-          <div class="cover-container">
+          <div class="cover-container clearfix">
             <h2>Oferta i Cennik</h2>
-            <div class="row">
-              <div class="col col-6">
-                <h3>Bed i Mattress</h3>
+            <div class="item-container">
+            <div class="item first">
+                <h3>łóżko</h3>
                 <p>Blah de blah.</p>
-                <p>Stick a picture in here.</p>
-                <p>More detailed description.</p>
-              </div>
-              <div class="col col-6">
-                <h3>Oxygen Supply and Equipment</h3>
-                <p>Blah de blah.</p>
-                <p>Stick a picture in here.</p>
-                <p>More detailed description.</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col col-6">
-                <div class="panel panel-default">
-                  <div class="panel-body">
-                    <p>£blah per month</p>
-                  </div>
-                  <div class="panel-footer">
-                    <p>Small print</p>
-                  </div>
+                <div class="expandable-container small">
+                  <img src="img/bed.png" />
                 </div>
-              </div>
-              <div class="col col-6">
+                <p>More detailed description.</p>
                 <div class="panel panel-default">
                   <div class="panel-body">
                     <p>£blah per month</p>
@@ -124,13 +104,32 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+            <div class="item-container">
+              <div class="item">
+                <h3>koncentrator</h3>
+                <p>koncentrator i materac przeciwodleżynowy</p>
+                <div class="expandable-container small">
+                  <img src="img/compressor.png" />
+                </div>
+                <p>More detailed description.</p>
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                    <p>£blah per month</p>
+                  </div>
+                  <div class="panel-footer">
+                    <p>Small print</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end container -->
+        </div> <!-- end inner -->
+      </div><!-- end site-wrapper -->
 
       <div class="site-wrapper" name="contact" id="contact">
         <div class="site-wrapper-inner">
-          <div class="cover-container">
+          <div class="cover-container clearfix">
             <div class="col col-6">
               <h2>Skontaktuj się z nami</h2>
               <p>Skontaktuj się z nami za pośrednictwem naszego formularza lub wyślij email na adres </p>
@@ -179,6 +178,7 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/marslaw.js"></script>
 </body>
 
 </html>

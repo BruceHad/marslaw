@@ -57,6 +57,32 @@ a:hover {
   background-color: #b2c7c8;
   border: 1px solid #385076;
 }
+/* Images */
+.expandable-container img {
+  border: 5px solid #385076;
+  display: block;
+}
+.expandable-container.small {
+  max-height: 208px;
+  margin: 0 auto;
+}
+.expandable-container.large {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.small img {
+  height: 200px;
+  width: auto;
+}
+.large img {
+  display: block;
+  height: auto;
+  margin: 55px auto;
+}
 /* Base structure */
 html,
 body {
@@ -76,22 +102,20 @@ body {
 .site-wrapper {
   display: table;
   width: 100%;
-  height: 100%;
-  /* For at least Firefox */
-  min-height: 100%;
+  padding: 50px 0;
+  /* Offset for nav */
 }
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
 }
+.cover-container {
+  padding: 0 15px;
+}
 .cover-container,
 .masthead-container {
   margin-right: auto;
   margin-left: auto;
-}
-/* Padding for spacing */
-.inner {
-  padding: 30px;
 }
 /* Header */
 .marslaw-logo-large {
@@ -109,7 +133,7 @@ body {
 .masthead {
   background-color: rgba(56, 80, 118, 0.95);
   width: 100%;
-  z-index: 9999;
+  z-index: 1000;
 }
 .masthead h1 {
   margin: 0;
@@ -126,6 +150,9 @@ body {
   background: url(../img/marslaw_wt_small.png) no-repeat top left;
   text-indent: -9999px;
 }
+#my-navbar {
+  padding: 0 15px;
+}
 .masthead-nav > li {
   display: inline-block;
 }
@@ -140,7 +167,7 @@ body {
   color: #fff;
   /* IE8 proofing */
   color: rgba(255, 255, 255, 0.75);
-  border-bottom: 2px solid transparent;
+  border-bottom: 4px solid transparent;
   text-transform: uppercase;
 }
 .masthead-nav > li > a:hover,
@@ -155,14 +182,6 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
-}
 footer {
   background-color: rgba(56, 80, 118, 0.95);
   padding: 15px;
@@ -175,8 +194,48 @@ footer {
   background: url(../img/sleeping.png) no-repeat center center fixed;
   background-size: cover;
 }
-/* Affix and center */
+.item {
+  padding: 1px 10px;
+  margin-left: 15px;
+  margin-right: 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.item.first {
+  margin-right: 15px;
+  margin-left: 0;
+}
+@media (max-width: 767px) {
+  /* Affix nav */
+  #my-navbar.affixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(56, 80, 118, 0.95);
+  }
+  .row {
+    margin: 0;
+    /* override bootstrap */
+  }
+}
 @media (min-width: 768px) {
+  .item-container {
+    float: left;
+    width: 50%;
+  }
+  .mastfoot,
+  .masthead-container,
+  .cover-container {
+    max-width: 900px;
+  }
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+    margin: 0;
+  }
   /* Pull out the header and footer */
   .masthead {
     position: fixed;
@@ -185,8 +244,9 @@ footer {
     overflow: hidden;
   }
   .site-wrapper {
-    padding-top: 50px;
-    /* Offset for nav */
+    height: 100%;
+    /* For at least Firefox */
+    min-height: 100%;
   }
   .site-wrapper-inner {
     vertical-align: middle;
@@ -198,6 +258,7 @@ footer {
   .cover-container {
     width: 100%;
     /* Must be percentage or pixels for horizontal alignment */
+    padding: 0;
   }
   /* Grids */
   .col {
@@ -224,12 +285,5 @@ footer {
   }
   .col-9 {
     width: 75%;
-  }
-}
-@media (min-width: 992px) {
-  .mastfoot,
-  .masthead-container,
-  .cover-container {
-    width: 800px;
   }
 }
